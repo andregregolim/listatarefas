@@ -1,15 +1,15 @@
 package br.com.apitarefas.api.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Entity(name = "Tarefa")
+@Entity()
 @Table(name = "tarefas")
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
+@Getter
+@Setter
 public class Tarefa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
